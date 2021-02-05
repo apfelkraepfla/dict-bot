@@ -49,7 +49,7 @@ async def handle_message(message):
             reply = f'Sorry, {word} has no definition. :('
     except:
         reply = 'Sorry, an error occurred while fetching that definition.'
-    await client.send_message(message.channel, reply)
+    await message.channel.send(reply)
 
 
 @client.event
